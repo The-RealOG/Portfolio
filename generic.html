@@ -5,8 +5,270 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'Poppins', sans-serif;
+				background-color: #0a0a0a;
+				color: #f0f0f0;
+			}
+			
+			/* Modern neon glow effects - toned down for readability */
+			.neon-text {
+				text-shadow: 0 0 5px rgba(0, 195, 255, 0.8), 
+							0 0 10px rgba(0, 195, 255, 0.3);
+				color: #ffffff;
+				font-weight: 500;
+			}
+			
+			/* Glass morphism effect with better contrast */
+			.glass-panel {
+				background: rgba(25, 25, 35, 0.85);
+				backdrop-filter: blur(10px);
+				border-radius: 15px;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+				padding: 30px;
+				margin: 20px 0;
+				transition: all 0.3s ease;
+			}
+			.glass-panel:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 15px 40px 0 rgba(0, 195, 255, 0.2);
+			}
+			
+			/* Animated gradient background - darkened for better contrast */
+			.gradient-bg {
+				background: linear-gradient(-45deg, #080808, #131313, #1d1d1d, #131313);
+				background-size: 400% 400%;
+				animation: gradient 15s ease infinite;
+			}
+			
+			@keyframes gradient {
+				0% { background-position: 0% 50%; }
+				50% { background-position: 100% 50%; }
+				100% { background-position: 0% 50%; }
+			}
+			
+			/* Education timeline with improved readability */
+			.timeline {
+				position: relative;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.timeline::after {
+				content: '';
+				position: absolute;
+				width: 6px;
+				background: linear-gradient(180deg, #00c3ff, #6a11cb);
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -3px;
+				border-radius: 10px;
+				box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+			}
+			
+			.timeline-item {
+				padding: 10px 40px;
+				position: relative;
+				width: 50%;
+				box-sizing: border-box;
+				background: rgba(15, 15, 25, 0.7);
+				border-radius: 8px;
+				margin: 15px 0;
+				border: 1px solid rgba(255, 255, 255, 0.05);
+			}
+			
+			.timeline-item:nth-child(odd) {
+				left: 0;
+			}
+			
+			.timeline-item:nth-child(even) {
+				left: 50%;
+			}
+			
+			.timeline-item::after {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				right: -10px;
+				background: linear-gradient(45deg, #00c3ff, #6a11cb);
+				border-radius: 50%;
+				top: 15px;
+				z-index: 1;
+				box-shadow: 0 0 15px rgba(0, 195, 255, 0.7);
+			}
+			
+			.timeline-item:nth-child(even)::after {
+				left: -10px;
+			}
+			
+			/* Timeline item headers */
+			.timeline-item h4 {
+				color: white;
+				margin-bottom: 10px;
+				font-weight: 500;
+				letter-spacing: 0.3px;
+			}
+			
+			/* Timeline item list styling */
+			.timeline-item ul {
+				margin-left: 20px;
+			}
+			
+			.timeline-item li {
+				color: #f0f0f0;
+				margin-bottom: 5px;
+				line-height: 1.6;
+			}
+			
+			/* Skill bar */
+			.skill-bar {
+				width: 100%;
+				height: 10px;
+				background: rgba(255, 255, 255, 0.15);
+				border-radius: 10px;
+				margin: 15px 0;
+				position: relative;
+			}
+			
+			.skill-level {
+				height: 100%;
+				border-radius: 10px;
+				background: linear-gradient(90deg, #00c3ff, #6a11cb);
+				position: relative;
+				animation: skillFill 2s ease-out forwards;
+				box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+			}
+			
+			@keyframes skillFill {
+				0% { width: 0; }
+				100% { width: var(--skill-percent); }
+			}
+			
+			/* Custom scrollbar */
+			::-webkit-scrollbar {
+				width: 8px;
+			}
+			::-webkit-scrollbar-track {
+				background: #0a0a0a;
+			}
+			::-webkit-scrollbar-thumb {
+				background: linear-gradient(45deg, #00c3ff, #6a11cb);
+				border-radius: 10px;
+			}
+			
+			/* Sidebar scrollbar styling */
+			#sidebar {
+				scrollbar-width: thin;
+				scrollbar-color: #6a11cb #0a0a0a;
+			}
+
+			#sidebar::-webkit-scrollbar {
+				width: 8px;
+			}
+
+			#sidebar::-webkit-scrollbar-track {
+				background: #0a0a0a;
+			}
+
+			#sidebar::-webkit-scrollbar-thumb {
+				background: linear-gradient(45deg, #00c3ff, #6a11cb);
+				border-radius: 10px;
+			}
+			
+			/* Menu styling with improved readability */
+			#menu ul li a, #menu ul li span {
+				color: #f0f0f0;
+				transition: all 0.3s ease;
+				border-left: 3px solid transparent;
+				padding-left: 10px;
+				font-weight: 400;
+				letter-spacing: 0.3px;
+			}
+
+			#menu ul li a:hover, #menu ul li span:hover {
+				color: #ffffff;
+				text-shadow: 0 0 10px rgba(0, 195, 255, 0.7), 
+							0 0 15px rgba(0, 195, 255, 0.4);
+				border-left-color: #00c3ff;
+				padding-left: 15px;
+			}
+
+			#menu ul li.active > a, #menu ul li.active > span {
+				color: #00c3ff;
+				border-left-color: #00c3ff;
+				text-shadow: 0 0 10px rgba(0, 195, 255, 0.7);
+			}
+
+			#menu h2 {
+				color: #fff;
+				text-shadow: 0 0 10px rgba(0, 195, 255, 0.7), 
+							0 0 15px rgba(0, 195, 255, 0.4);
+			}
+
+			#menu ul.actions li a.button {
+				background: linear-gradient(45deg, #00c3ff, #6a11cb);
+				color: white;
+				border: none;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+				transition: all 0.3s ease;
+			}
+
+			#menu ul.actions li a.button:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+			}
+			
+			/* Badge styling with improved visibility */
+			.badge {
+				display: inline-block;
+				padding: 6px 12px;
+				background: linear-gradient(45deg, #00a3df, #5a24c7);
+				color: white;
+				border-radius: 20px;
+				font-size: 0.8em;
+				margin: 3px;
+				font-weight: 600;
+				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+				letter-spacing: 0.3px;
+			}
+			
+			/* Better list styling for better readability */
+			ul li {
+				color: #f0f0f0;
+				line-height: 1.6;
+				margin-bottom: 8px;
+			}
+			
+			/* Improve headings */
+			h2, h3, h4 {
+				letter-spacing: 0.5px;
+			}
+			
+			h3 {
+				font-weight: 500;
+				color: #ffffff;
+				margin: 20px 0 10px 0;
+			}
+			
+			/* Make section separators more visible */
+			hr.major {
+				border-color: rgba(255, 255, 255, 0.15);
+				margin: 40px 0;
+			}
+			
+			/* Improve grade display */
+			.grade-display {
+				font-weight: 600;
+				letter-spacing: 0.5px;
+			}
+		</style>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload gradient-bg">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -17,7 +279,18 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html"><strong>Home Page</strong></a>
+									<a href="index.html" style="
+										font-size: 1.5rem;
+										background-color: #1a1a1a;
+										padding: 12px 24px;
+										border-radius: 8px;
+										display: inline-block;
+										border: 2px solid #00c3ff;
+										color: #ffffff;
+										font-weight: 600;
+										text-decoration: none;
+										transition: all 0.3s ease;
+									">Home Page</a>
 									<ul class="icons">
 										<li><a href="https://www.linkedin.com/in/chibueze-anyachebelu-8b1098265/" class="icon brands fa-linkedin-in" style="font-size:30px"><span class="label">LinkedIn</span></a></li>
 										<li><a href="https://github.com/The-RealOG" class="icon brands fa-github" style="font-size:30px"><span class="label">GitHub</span></a></li>
@@ -30,78 +303,172 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Education</h1>
+										<h1 class="neon-text">Education</h1>
 									</header>
 
-									<span class="image main"><img src="images/Chibs photo.jpg" alt="" /></span>
-									<h2>NORTHWESTERN UNIVERSITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; September 2023 - June 2027</h2>
-									<h3 id="Header5">B.A. in Neuroscience || B.A. in Computer Science</h3>
-									<h3 id="Header4">Relevant Courses:</h3>
-									<p>Fundamentals of Computer Programming I (CS 111), Fundamentals of Computer Programming II (CS 150), Data Structures & Algorithms (CS 214), Linear Algebra (MATH 240), Single Variable Calculus I (MATH 220-1), Single Variable Calculus II (MATH 220-2), Multivariable Calculus I (MATH 230-1), Advanced Inorganic Chemistry & Lab (CHEM 171), Advanced Inorganic Chemistry & Lab II (CHEM 172), College Physics I (PHYSICS 130-1)
-									</p>
+									<span class="image main" style="border-radius:12px; overflow:hidden; box-shadow: 0 10px 30px rgba(0, 120, 255, 0.25); transform: perspective(800px) rotateY(2deg);">
+										<img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Abstract digital representation of neural networks and circuit pathways, representing the intersection of neuroscience and computer science" />
+									</span>
+									
+									<div class="glass-panel">
+										<h2 class="neon-text">NORTHWESTERN UNIVERSITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; September 2023 - June 2027</h2>
+										<h3 id="Header5">B.A. in Computer Science || B.A. in Neuroscience</h3>
+										<h3 id="Header4">Relevant Courses:</h3>
+										<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+											<span class="badge">Functional & Object-Oriented Programming</span>
+											<span class="badge">Data Structures & Algorithms</span>
+											<span class="badge">Linear Algebra</span>
+											<span class="badge">Discrete Mathematics</span>
+											<span class="badge">Single & Multivariable Calculus</span>
+											<span class="badge">Machine Learning</span>
+											<span class="badge">Physics</span>
+											<span class="badge">Human Computer Interactions</span>
+											<span class="badge">Manual Memory Management</span>
+										</div>
+										
+										<h3 id="Header4">Activities:</h3>
 										<ul>
-										<li>African Students Association (ASA)</li>
-										<li>Emerging Coders </li>
-										<li>National Association of Black Engineers (NSBE)</li>
-										<li>Crummunity</li>
+											<li>African Students Association (ASA)</li>
+											<li>Emerging Coders @ Northwestern University</li>
+											<li>National Association of Black Engineers (NSBE)</li>
+											<li>NU Crummunity</li>
 										</ul>
 										
 										<h3 id="Header4">Honors:</h3>
 										<ul>
-										<li>First place (out of 80+ applicants) for the 2023's Balanced Man Scholarship; received a $500 award.</li>
-										<li>One of 30 scholars selected for Northwestern University's Bioscientist Research Program (2023/24).</li>
-										
+											<li>First place (out of 80+ applicants) for the 2023's Balanced Man Scholarship; received a $500 award.</li>
+											<li>One of 30 scholars selected for Northwestern University's Bioscientist Research Program (2023/24).</li>
 										</ul>
-										
-										</p>
+									</div>
+									
 									<hr class="major" />
 
-									<h3 id="Header4">External Certifications</h3>
-									<p>
+									<div class="glass-panel">
+										<h3 id="Header4" class="neon-text">External Certifications</h3>
+										<div class="timeline">
+											<div class="timeline-item">
+												<h4>Programming & Computer Science</h4>
+												<ul>
+													<li>Codepath Cyber Security Pathway</li>
+													<li>Codepath Technical Interview Pathway</li>
+													<li>FreeCodecamp FullStack Development Course</li>
+													<li>FreeCodeCamp Machine Learning & Generative AI Course</li>
+													<li>HTML, CSS, and PYTHON Sololearn Courses</li>
+												</ul>
+											</div>
+											<div class="timeline-item">
+												<h4>Professional Development</h4>
+												<ul>
+													<li>McKinsey & Company Forward Learner's Course</li>
+													<li>Introductory Courses on Computer Science, Electrical Engineering and Cognitive Science on MIT's OpenCourseWare (OCW)</li>
+													<li>Information Management at UCHESCO Computer School</li>
+												</ul>
+											</div>
+											<div class="timeline-item">
+												<h4>Specialized Fields</h4>
+												<ul>
+													<li>Fundamentals of Neuroscience on EdX</li>
+													<li>Duolingo French Course</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									<hr class="major" />
+
+									<div class="glass-panel">
+										<h2 class="neon-text">HIGH SCHOOL: INTERNATIONAL SCHOOL, UNIVERSITY OF LAGOS, AKOKA<br>
+										September 2015 - October 2021</h2>
+										<h3 id="Header4">Activities and societies:</h3>
 										<ul>
-											<li>McKinsey & Company Forward Learner’s Course</li>
-											<li>Codepath Cyber Security Pathway</li>	
-											<li>Codepath Technical Interview Pathway</li>	
-											<li>FreeCodecamp FullStack Development Course</li>	
-											<li>FreeCodeCamp Machine Learning & Generative AI Course</li>	
-											<li>Introductory Courses on Computer Science, Electrical Engineering and Cognitive Science on MIT's OpenCourseWare (OCW).</li>	
-											<li>Fundamentals of Neuroscience on EdX</li>	
-											<li>Duolingo French Course</li>	
-											<li>HTML, CSS, and PYTHON Sololearn Courses</li>	
-											<li>Information Management at UCHESCO Computer School</li>	
-
+											<li>Head Boy</li>	
+											<li>Co-President, Social Committee <b>(2021)</b></li>	
+											<li>Attendee/Participant, Innovation Labs <b>(2020)</b></li>	
+											<li>Speaker, UNICEF Child's Right Think-Tank Initiative <b>(2020)</b></li>	
+											<li>Attendee/Participant, African Youths Initiative on Crime Prevention (AYICRIP) <b>(2019)</b></li>	
+											<li>Peer Mentor</li>	
+											<li>Class Captain & Subject Captain</li>	
+											<li>Chess Club</li>	
 										</ul>
-									</p>
-									<hr class="major" />
+										<p id="Header7" style="margin-top: 25px; font-size: 1.2rem;"><b>GPA:</b> <span class="neon-text" style="font-size: 1.3rem; background-color: rgba(0, 0, 0, 0.6); padding: 3px 10px; border-radius: 5px; border: 1px solid rgba(0, 195, 255, 0.3);">3.98/4.0</span></p>
 
-									<h2>HIGH SCHOOL: INTERNATIONAL SCHOOL, UNIVERSITY OF LAGOS, AKOKA <br>
-									September 2015 - October 2021</h2>
-									<h3 id="Header4">Activities and societies:</h3>
-									<ul>
-									<li>Head Boy</li>	
-										<li>Co-President, Social Committee <b>(2021)</b></li>	
-										<li>Attendee/Participant, Innovation Labs <b>(2020)</b></li>	
-										<li>Speaker, UNICEF Child's Right Think-Tank Initiative <b>(2020)</b></li>	
-										<li>Attendee/Participant, African Youths Initiative on Crime Prevention (AYICRIP) <b>(2019)</b></li>	
-										<li>Peer Mentor</li>	
-										<li>Class Captain & Subject Captain</li>	
-										<li>Chess Club</li>	
-									</ul>
-									<p id="Header7"><b>GPA:</b> 3.98/4.0</p>
-									<p id="Header6"><b>Grade: <br>
-										West African Senior School Certificate Examination WASSCE 2021 (8A1s,1B2):</b></p>
-								<ul>
-									<li>Biology - <b>A1</b></li>	
-									<li>Chemistry - <b>A1</b></li>	
-									<li>Physics - <b>A1</b></li>	
-									<li>Mathematics - <b>A1</b></li>	
-									<li>Further Mathematics - <b>A1</b></li>	
-									<li>English - <b>B2</b></li>	
-									<li>Civic Education - <b>A1</b></li>	
-									<li>Data Processing - <b>A1</b></li>	
-									<li>Physical Education - <b>A1</b></li>	
-								</ul>
-							
+										<p id="Header6" style="font-size: 1.1rem; margin-top: 20px;"><b>West African Senior School Certificate Examination WASSCE 2021:</b></p>
+									
+										<h4 style="background-color: rgba(0, 0, 0, 0.6); padding: 10px 15px; border-radius: 8px; display: inline-block; margin-bottom: 15px; border: 1px solid rgba(0, 195, 255, 0.3);">Academic Performance:</h4>
+										<div style="background-color: rgba(25, 25, 35, 0.85); padding: 25px; border-radius: 10px; border: 1px solid rgba(0, 195, 255, 0.15);">
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Biology</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Chemistry</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Physics</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Mathematics</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Further Mathematics</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">English</span>
+												<span class="neon-text">B2</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 90%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Civic Education</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Data Processing</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+											
+											<div style="display: flex; justify-content: space-between;">
+												<span style="font-weight: 500; color: #ffffff;">Physical Education</span>
+												<span class="neon-text">A1</span>
+											</div>
+											<div class="skill-bar">
+												<div class="skill-level" style="--skill-percent: 100%"></div>
+											</div>
+										</div>
+									
 
 									<h3 id="Header4">Honors</h3>
 									<ul>
@@ -116,8 +483,8 @@
 									<ul>
 										<li>Overall Best Student in the set, in Science & Technology stream, in Mathematics, in Further Mathematics, in Chemistry, in Physics, in Basic Technology, in Economics, in Data Processing, in Civic Education, in Igbo Language, in French, in Social Studies, in Fine Arts, in Christian Religious Studies, in Physical Education <b>(Grade 7 - 12)</b></li>	
 										<li>Most outstanding student in the National Examination Council (NECO) Basic Education Certification Examination (BECE) - <b>2018</b></li>	
-
 									</ul>
+									</div>
 
 								</section>
 
@@ -138,73 +505,49 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Navigation</h2>
 									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Education</a></li>
-										<li><a href="elements.html">Work Experience</a></li>
+									<ul style="margin-top: 15px;">
+										<li><a href="index.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">HOME</a></li>
+										<li><a href="generic.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">EDUCATION</a></li>
+										<li><a href="elements.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">WORK EXPERIENCE</a></li>
 										<li>
-											<span class="opener">Submenu</span>
+											<span class="opener" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">PROJECTS</span>
 											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
+												<li><a href="ai-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">AI/ML & Robotics</a></li>
+												<li><a href="software-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Software Engineering</a></li>
+												<li><a href="data-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Data Science</a></li>
 											</ul>
 										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
+										<li><a href="research.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">RESEARCH & PUBLICATIONS</a></li>
 									</ul>
 								</nav>
 
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Contact</h2>
 									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
+									<ul class="contact" style="background-color: rgba(25, 25, 35, 0.85); padding: 20px; border-radius: 10px; border: 1px solid rgba(0, 195, 255, 0.15); margin: 0; list-style: none;">
+										<li class="icon solid fa-envelope" style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
+											<a style="font-size: 0.9rem; color: #ffffff; font-weight: 500; word-break: break-word; line-height: 1.4;" href="mailto:chibuezeanyachebelu2027@u.northwestern.edu">chibuezeanyachebelu2027@u.northwestern.edu</a>
+										</li>
+										<li class="icon solid fa-home" style="margin-bottom: 15px; color: #ffffff; display: flex; align-items: flex-start;">
+											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
+											<span style="font-size: 0.9rem; line-height: 1.4;">
+												1871 Orington Avenue<br />
+												Evanston, IL 60201
+											</span>
+										</li>
+										<li class="icon solid fa-university" style="color: #ffffff; display: flex; align-items: flex-start;">
+											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
+											<span style="font-size: 0.9rem; line-height: 1.4;">
+												Northwestern University<br />
+											</span>
+										</li>
 									</ul>
 								</section>
-
-							<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Contact Me</h2>
-								</header>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a style="font-size: 11px"; href="mailto:chibuezeanyachebelu2027@u.northwestern.edu">chibuezeanyachebelu2027@u.northwestern.edu</a></li>
-									<li class="icon solid fa-home"> 1871 Orington Avenue<br />
-									Evanston, IL 60201</li>
-								</ul>
-							</section>
 
 						<!-- Footer -->
 							<footer id="footer">
