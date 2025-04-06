@@ -1,42 +1,43 @@
-Portfolio Website
-Welcome to my personal portfolio website, a showcase of my work in Neuroscience, Computer Science, and Artificial Intelligence. This website highlights my projects, research, and contributions, while providing insight into my skills in full-stack development and computational research.
+# Chibueze Anyachebelu's Portfolio
 
-Website Overview
-This portfolio is built using HTML, CSS, and JavaScript, designed to be a simple and elegant way to present my professional and academic achievements. It includes the following sections:
+A showcase of my interdisciplinary work spanning computer science, robotics & biomedical research, and academia at Northwestern University.
 
-About Me: A brief overview of my background, interests, and goals.
-Projects: A detailed look at some of the most exciting projects I have worked on.
-Skills: A summary of the technical skills I have developed over time.
-Contact: Easy ways to get in touch with me for collaboration or networking.
-Features
-Responsive design for optimal viewing on all devices.
-Clean and intuitive user interface.
-Easy navigation between sections.
-Highlighted research and projects in Neuroscience, AI, and Software Development.
-Technologies Used
-HTML5: For the basic structure and content of the website.
-CSS3: For layout, styling, and responsiveness.
-JavaScript: For interactive features and functionality.
-GitHub Pages: Used for hosting the website live.
-Usage
-To view my portfolio, visit the live site hosted on GitHub Pages:
+## Overview
 
-My Portfolio
+This portfolio highlights my professional journey, technical skills, and research projects. The site features:
 
-Alternatively, you can clone the repository and run it locally:
+- **Work Experience**: Diverse roles including teaching, research, and software development
+- **Education**: My academic background at Northwestern University
+- **Projects**: Technical implementations and research contributions
+- **Skills**: Programming languages, frameworks, and interdisciplinary capabilities
 
-bash
-git clone https://github.com/The-RealOG/Portfolio.git
-cd Portfolio
+## Technical Implementation
 
-Then open index.html in your preferred web browser.
+Built with modern web technologies:
+- **Frontend**: HTML5, CSS3 with glass morphism effects and responsive design
+- **Styling**: Custom animations and modern UI elements
+- **Performance**: Optimized for all devices with accessible navigation
 
-Future Enhancements
-Add more interactive elements such as animations and transitions.
-Expand the project section to include more research papers and technical work.
-Improve SEO for better visibility on search engines.
+## Key Features
 
-How to Use This README:
-Replace the placeholders (your-email@example.com, Your LinkedIn Profile) with your actual information.
-Add or modify any sections based on your personal preferences and additional information about your portfolio.
-Let me know if you'd like further customizations!
+- Clean, modern aesthetic with neon/glass design elements
+- Responsive layout for desktop and mobile viewing
+- Dedicated sections showcasing my multidisciplinary background
+- Clear navigation between academic, research, and development work
+
+## Experience Highlights
+
+- **Teaching**: CS 110 Undergraduate Teaching Assistant at Northwestern
+- **Software Development**: Backend developer for Daily Northwestern
+- **Research**: & Robotics Research at the Center for Robotics & Biosystems & Biomedical research at Simpson & Querrey Center
+- **Academic Support**: Peer mentoring in mathematics
+
+## Future Enhancements
+
+- Interactive project demonstrations
+- Integration with academic publication repositories
+- Expanded visualization of research outcomes
+
+## Contact
+
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/chibueze-anyachebelu-8b1098265/) or [GitHub](https://github.com/The-RealOG) for collaboration opportunities.
