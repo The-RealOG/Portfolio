@@ -1,585 +1,100 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Chibueze Anyachebelu</title>
-		<style>
-			body {
-				font-family: 'Poppins', sans-serif;
-				background-color: #121212;
-				color: #f0f0f0;
-				line-height: 1.7;
-				font-weight: 300;
-			}
-			.inner {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 30px; 
-			}
-			h1, h2 {
-				font-size: 2.2rem;
-				color: #ffffff;
-				font-weight: 600;
-				margin-bottom: 1.5rem;
-				letter-spacing: 0.5px;
-			}
-			h3 {
-				font-size: 1.5rem;
-				font-weight: 500;
-				margin-bottom: 1rem;
-				color: #ffffff;
-			}
-			p {
-				line-height: 1.7;
-				margin-bottom: 1.2rem;
-				font-size: 1rem;
-				max-width: 800px;
-			}
-			
-			/* More visible neon effect */
-			.neon-text {
-				text-shadow: 0 0 5px rgba(0, 195, 255, 0.8), 
-							0 0 10px rgba(0, 195, 255, 0.3);
-				color: #ffffff;
-				font-weight: 500;
-			}
-			
-			/* 3D parallax container - with reduced intensity */
-			.parallax-container {
-				perspective: 800px;
-				min-height: 80vh;
-				overflow: hidden;
-				position: relative;
-				margin-bottom: 50px;
-			}
-			
-			.parallax-layer {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-			}
-			
-			.layer-1 { transform: translateZ(-50px) scale(1.1); }
-			.layer-2 { transform: translateZ(0) scale(1); }
-			.layer-3 { transform: translateZ(50px) scale(0.9); }
-			
-			/* More contrast for glass panels */
-			.glass-panel {
-				background: rgba(30, 30, 40, 0.75);
-				backdrop-filter: blur(8px);
-				border-radius: 10px;
-				border: 1px solid rgba(255, 255, 255, 0.15);
-				box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-				padding: 35px;
-				margin: 20px 0;
-				transition: all 0.3s ease;
-			}
-			.glass-panel:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 8px 25px 0 rgba(0, 195, 255, 0.1);
-			}
-			
-			/* Professional button styling */
-			.btn-modern {
-				background: linear-gradient(45deg, #0088cc, #5a37ba);
-				color: white;
-				border: none;
-				padding: 10px 20px;
-				border-radius: 5px;
-				font-weight: 500;
-				cursor: pointer;
-				transition: all 0.3s ease;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				display: inline-block;
-				text-decoration: none;
-				font-size: 0.85rem;
-				margin: 8px 0;
-			}
-			.btn-modern:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 6px 12px rgba(90, 55, 186, 0.25);
-			}
-			
-			/* Darker gradient background for better contrast */
-			.gradient-bg {
-				background: #0c0c0c;
-				background: linear-gradient(-45deg, #0c0c0c, #151515, #1d1d1d, #151515);
-				background-size: 400% 400%;
-				animation: gradient 20s ease infinite;
-			}
-			
-			/* Skills chips with better contrast */
-			.skill-chip {
-				background: rgba(40, 40, 60, 0.6);
-				padding: 6px 14px;
-				border-radius: 4px;
-				font-size: 0.85rem;
-				display: inline-block;
-				margin: 0 5px 8px 0;
-				font-weight: 400;
-				border: 1px solid rgba(255, 255, 255, 0.1);
-				color: white;
-				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-			}
-			
-			/* Content sections with better spacing */
-			.content-section {
-				margin-bottom: 60px;
-			}
-			
-			/* Project cards with better contrast */
-			.project-card {
-				background: rgba(30, 30, 40, 0.75);
-				border-radius: 10px;
-				overflow: hidden;
-				transition: all 0.3s ease;
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-				border: 1px solid rgba(255, 255, 255, 0.1);
-			}
-			
-			.project-card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-			}
-			
-			.project-card .image {
-				height: 200px;
-				overflow: hidden;
-			}
-			
-			.project-card .image img {
-				object-fit: cover;
-				height: 100%;
-				width: 100%;
-				transition: transform 0.6s ease;
-			}
-			
-			.project-card:hover .image img {
-				transform: scale(1.05);
-			}
-			
-			.project-card .content {
-				padding: 20px;
-				flex-grow: 1;
-				display: flex;
-				flex-direction: column;
-			}
-			
-			.project-card h3 {
-				margin-bottom: 10px;
-				font-size: 1.3rem;
-				color: white;
-			}
-			
-			.project-card p {
-				margin-bottom: 20px;
-				flex-grow: 1;
-				color: #f0f0f0;
-			}
-			
-			.posts {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-				gap: 25px;
-				margin-top: 30px;
-			}
-			
-			/* Custom scrollbar */
-			::-webkit-scrollbar {
-				width: 8px;
-			}
-			::-webkit-scrollbar-track {
-				background: #0a0a0a;
-			}
-			::-webkit-scrollbar-thumb {
-				background: linear-gradient(45deg, #00c3ff, #6a11cb);
-				border-radius: 10px;
-			}
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Chibueze Anyachebelu</title>
+	<meta name="description" content="Chibueze Anyachebelu: Computer Science & Neuroscience at Northwestern University. Learning about and building intelligent systems, whatever form they take." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
 
-			/* Sidebar scrollbar styling */
-			#sidebar {
-				scrollbar-width: thin;
-				scrollbar-color: #6a11cb #0a0a0a;
-			}
-
-			#sidebar::-webkit-scrollbar {
-				width: 8px;
-			}
-
-			#sidebar::-webkit-scrollbar-track {
-				background: #0a0a0a;
-			}
-
-			#sidebar::-webkit-scrollbar-thumb {
-				background: linear-gradient(45deg, #00c3ff, #6a11cb);
-				border-radius: 10px;
-			}
-
-			/* Menu styling with improved readability */
-			#menu ul li a, #menu ul li span {
-				color: #f0f0f0;
-				transition: all 0.3s ease;
-				border-left: 3px solid transparent;
-				padding-left: 10px;
-				font-weight: 400;
-				letter-spacing: 0.3px;
-			}
-
-			#menu ul li a:hover, #menu ul li span:hover {
-				color: #ffffff;
-				text-shadow: 0 0 10px rgba(0, 195, 255, 0.7), 
-							0 0 15px rgba(0, 195, 255, 0.4);
-				border-left-color: #00c3ff;
-				padding-left: 15px;
-			}
-
-			#menu ul li.active > a, #menu ul li.active > span {
-				color: #00c3ff;
-				border-left-color: #00c3ff;
-				text-shadow: 0 0 10px rgba(0, 195, 255, 0.7);
-			}
-
-			#menu h2 {
-				color: #fff;
-				text-shadow: 0 0 10px rgba(0, 195, 255, 0.7), 
-							0 0 15px rgba(0, 195, 255, 0.4);
-			}
-
-			#menu ul.actions li a.button {
-				background: linear-gradient(45deg, #00c3ff, #6a11cb);
-				color: white;
-				border: none;
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-				transition: all 0.3s ease;
-			}
-
-			#menu ul.actions li a.button:hover {
-				transform: translateY(-3px);
-				box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
-			}
-			
-			/* Improved text backgrounds */
-			.text-with-bg {
-				background-color: rgba(0, 0, 0, 0.4);
-				padding: 4px 8px;
-				border-radius: 4px;
-				display: inline-block;
-			}
-			
-			/* Ensure strong tags stand out */
-			strong {
-				color: white;
-				font-weight: 600;
-			}
-
-			/* Enhanced neon effect for name */
-			.enhanced-neon-text {
-				color: #ffffff;
-				font-weight: 700;
-				text-shadow: 
-					0 0 10px rgba(0, 195, 255, 1), 
-					0 0 20px rgba(0, 195, 255, 0.8),
-					0 0 30px rgba(0, 195, 255, 0.6),
-					0 0 40px rgba(0, 195, 255, 0.4);
-				animation: pulsate 1.5s infinite alternate;
-			}
-
-			@keyframes pulsate {
-				100% {
-					text-shadow: 
-						0 0 12px rgba(0, 195, 255, 1), 
-						0 0 24px rgba(0, 195, 255, 0.8),
-						0 0 36px rgba(0, 195, 255, 0.6),
-						0 0 48px rgba(0, 195, 255, 0.4);
-				}
-				0% {
-					text-shadow: 
-						0 0 5px rgba(0, 195, 255, 1), 
-						0 0 10px rgba(0, 195, 255, 0.8),
-						0 0 15px rgba(0, 195, 255, 0.6),
-						0 0 20px rgba(0, 195, 255, 0.4);
-				}
-			}
-
-			/* Social icon hover effects */
-			.social-icon {
-				font-size: 28px;
-				background-color: rgba(0, 0, 0, 0.7);
-				border-radius: 50%;
-				width: 50px;
-				height: 50px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin: 0 5px;
-				border: 1px solid rgba(0, 195, 255, 0.3);
-				transition: all 0.3s ease;
-				color: #ffffff;
-			}
-
-			.social-icon:hover {
-				background-color: rgba(0, 195, 255, 0.2);
-				transform: translateY(-3px);
-				box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
-				border-color: rgba(0, 195, 255, 0.7);
-			}
-
-			/* Media query for responsive header */
-			@media screen and (max-width: 768px) {
-				.header-container {
-					flex-direction: column;
-				}
-				
-				.social-icons-container {
-					position: static !important;
-					transform: none !important;
-					margin-top: 20px;
-				}
-				
-				.name-heading {
-					font-size: 2.5rem !important;
-				}
-			}
-
-			/* Responsive header styles */
-			@media screen and (max-width: 768px) {
-				#header h1 {
-					font-size: 2rem !important;
-					margin-bottom: 15px;
-				}
-				
-				#header > div {
-					flex-direction: column;
-					align-items: center;
-					text-align: center;
-				}
-				
-				#header .icons {
-					margin-top: 15px;
-				}
-			}
-		</style>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body class="is-preload gradient-bg">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header" style="padding: 30px 0;">
-									<div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-										<h1 style="font-size: 2.8rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; font-weight: 600; margin: 0; padding: 0;"><strong>CHIBUEZE ANYACHEBELU</strong></h1>
-										<ul class="icons" style="display: flex; margin: 0; padding: 0;">
-											<li><a href="https://www.linkedin.com/in/chibueze-anyachebelu-8b1098265/" class="icon brands fa-linkedin-in social-icon"><span class="label">LinkedIn</span></a></li>
-											<li><a href="https://github.com/The-RealOG" class="icon brands fa-github social-icon"><span class="label">GitHub</span></a></li>
-									</ul>
-									</div>
-								</header>
-								
-							<!-- Banner -->
-								<section id="banner" class="content-section">
-									<div class="row" style="display: flex; align-items: center; flex-wrap: wrap; margin: 0 -15px;">
-										<div class="col-lg-7" style="flex: 0 0 58%; max-width: 58%; padding: 0 15px; box-sizing: border-box;">
-											<div class="glass-panel">
-										<header>
-													<h1 style="font-size: 2.2rem; margin-bottom: 1.2rem;" class="neon-text">Hi, I'm Chibueze</h1>
-												</header>
-												
-												<h2 style="font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; margin: 1.5rem 0 1rem 0; font-weight: 600; color: #ffffff;">ABOUT ME</h2>
-												<p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem; font-weight: 400; color: #ffffff; max-width: 650px;">I'm a Computer Science and Neuroscience double major at Northwestern University (Class of '27), driven by a deep passion for exploring the intersection of artificial intelligence, robotics, and the brain. I believe that the future of innovation lies in the synergy between human and computational intelligence (whether through physical AI systems or digital models) and I'm committed to advancing research that brings us closer to that integration.</p>
-
-												<div style="margin: 2rem 0;">
-													<h3 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; margin-bottom: 1rem; color: #ffffff;">TECHNICAL SKILLS</h3>
-													<div style="display: flex; flex-wrap: wrap; margin-bottom: 1.5rem;">
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">Python</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">JavaScript</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">C/C++</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">React.js</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">Django</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">TensorFlow</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">CUDA</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">Racket</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">Numpy</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">OpenCV</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">Matplotlib</span>
-														<span class="skill-chip" style="font-weight: 500; font-size: 0.9rem;">Pandas</span>
-														
-													</div>
-												</div>
-												
-												<div style="margin-top: 2rem;">
-													<a href="https://drive.google.com/file/d/1NkbCr_NUyQ3_CQkrcmg91rY1jnWCzSig/view?usp=sharing" class="btn-modern" style="font-weight: 500; font-size: 0.95rem; padding: 12px 24px;">View Resume</a>
-													<a href="projects.html" class="btn-modern" style="background: rgba(40, 40, 60, 0.5); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-left: 10px; font-weight: 500; font-size: 0.95rem; padding: 12px 24px; border: 1px solid rgba(255, 255, 255, 0.1);">My Projects</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-5" style="flex: 0 0 42%; max-width: 42%; padding: 0 15px; box-sizing: border-box;">
-											<div style="transform: perspective(800px) rotateY(5deg); box-shadow: 0 15px 35px rgba(0,120,255,0.2); border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
-												<img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Abstract digital representation of neural networks and circuit pathways, representing the intersection of neuroscience and computer science" style="width: 100%; display: block;" />
-											</div>
-										</div>
-									</div>
-								</section>
-
-							<!-- Projects Section -->
-								<section class="content-section">
-									<header class="major">
-										<h2 class="neon-text" style="font-size: 1.8rem; margin-bottom: 1.5rem;">AREAS OF INTEREST</h2>
-									</header>
-									<div class="posts">
-										<article class="project-card">
-											<a href="ai-projects.html" class="image"><img src="images/pic01.jpg" alt="Project 1" /></a>
-											<div class="content">
-												<h3>AI/ML & ROBOTICS</h3>
-												<p>This is a curated collection of the AI/ML and Robotics projects I've developed (spanning both coursework and self-driven exploration) reflecting my passion for innovation, hands-on learning, and pushing the boundaries of what intelligent systems can do.</p>
-												<a href="ai-projects.html" class="btn-modern">View Projects</a>
-											</div>
-										</article>
-										<article class="project-card">
-											<a href="software-projects.html" class="image"><img src="images/pic02.jpg" alt="Project 2" /></a>
-											<div class="content">
-												<h3>SOFTWARE ENGINEERING</h3>
-												<p>Software Engineering is a discipline I hold close to my heart because it empowers me to turn not only my own ideas into reality, but also to help bring others' visions to life through the products I build. Here, you'll find a selection of projects I've developed as part of my journey to grow and refine my programming skills.</p>
-												<a href="software-projects.html" class="btn-modern">View Projects</a>
-											</div>
-										</article>
-										<article class="project-card">
-											<a href="data-projects.html" class="image"><img src="images/pic03.jpg" alt="Project 3" /></a>
-											<div class="content">
-												<h3>DATA SCIENCE & ENGINEERING</h3>
-												<p>Given my intersecting passions for research, intelligent systems, and the ever-growing volumes of data in our world today, I naturally became intrigued by how raw data is transformed into something meaningful. This curiosity led me to explore the world of data pipelines; how data is collected, cleaned, structured, and engineered for real-world applications. So, I thought to myself, Why not ?!</p>
-												<a href="data-projects.html" class="btn-modern">View Projects</a>
-											</div>
-										</article>
-									</div>
-									<div style="text-align: center; margin-top: 30px;">
-										<a href="projects.html" class="btn-modern" style="background: rgba(255,255,255,0.1); box-shadow: none;">View All Projects</a>
-									</div>
-								</section>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #e0e0e0;" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Navigation</h2>
-									</header>
-									<ul style="margin-top: 15px;">
-										<li><a href="index.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">HOME</a></li>
-										<li><a href="generic.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">EDUCATION</a></li>
-										<li><a href="elements.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">WORK EXPERIENCE</a></li>
-										<li>
-											<span class="opener" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">PROJECTS</span>
-											<ul>
-												<li><a href="ai-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">AI/ML & Robotics</a></li>
-												<li><a href="software-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Software Engineering</a></li>
-												<li><a href="data-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Data Science</a></li>
-											</ul>
-										</li>
-										<li><a href="research.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">RESEARCH & PUBLICATIONS</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2 class="neon-text">Contact</h2>
-									</header>
-									<ul class="contact" style="background-color: rgba(25, 25, 35, 0.85); padding: 20px; border-radius: 10px; border: 1px solid rgba(0, 195, 255, 0.15); margin: 0; list-style: none;">
-										<li class="icon solid fa-envelope" style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<a style="font-size: 0.9rem; color: #ffffff; font-weight: 500; word-break: break-word; line-height: 1.4;" href="mailto:chibuezeanyachebelu2027@u.northwestern.edu">chibuezeanyachebelu2027@u.northwestern.edu</a>
-										</li>
-										<li class="icon solid fa-home" style="margin-bottom: 15px; color: #ffffff; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<span style="font-size: 0.9rem; line-height: 1.4;">
-												1871 Orington Avenue<br />
-												Evanston, IL 60201
-											</span>
-										</li>
-										<li class="icon solid fa-university" style="color: #ffffff; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<span style="font-size: 0.9rem; line-height: 1.4;">
-												Northwestern University<br />
-
-											</span>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Chibueze Anyachebelu 2025</p>
-								</footer>
-
-						</div>
-					</div>
-
+	<nav class="site-nav">
+		<div class="wrap-wide">
+			<a class="brand" href="index.html">Chibueze Anyachebelu</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="education.html">Education</a></li>
+				<li><a href="research.html">Research</a></li>
+				<li><a href="bookshelf.html">Bookshelf</a></li>
+				<li><a href="work.html">Work</a></li>
+			</ul>
+			<div class="icons">
+				<a href="https://github.com/The-RealOG" aria-label="GitHub"><i class="fab fa-github"></i></a>
+				<a href="mailto:chibuezeanyachebelu2027@u.northwestern.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
 			</div>
+		</div>
+	</nav>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-			<!-- Parallax effect script -->
-			<script>
-				document.addEventListener('DOMContentLoaded', function() {
-					// Add hover effects to project cards
-					const projectCards = document.querySelectorAll('.project-card');
-					
-					projectCards.forEach(card => {
-						card.addEventListener('mouseenter', function() {
-							this.querySelector('img').style.transform = 'scale(1.05)';
-						});
-						
-						card.addEventListener('mouseleave', function() {
-							this.querySelector('img').style.transform = 'scale(1)';
-						});
-					});
-					
-					// Animate skill chips on page load
-					const skillChips = document.querySelectorAll('.skill-chip');
-					skillChips.forEach((chip, index) => {
-						chip.style.opacity = '0';
-						chip.style.transform = 'translateY(20px)';
-						
-						setTimeout(() => {
-							chip.style.transition = 'all 0.3s ease';
-							chip.style.opacity = '1';
-							chip.style.transform = 'translateY(0)';
-						}, 100 * index);
-					});
-				});
-			</script>
+	<section id="hero">
+		<div class="wrap">
+			<p class="eyebrow">Computer Science & Neuroscience · Northwestern University, Graduating December 2027</p>
+			<h1>Chibueze Anyachebelu</h1>
+			<p class="lede">Lately I've been deep in HPC, distributed systems, agentic AI, and deep learning: parallelizing simulations across a university HPC cluster, hardening a startup's distributed backend, and building agentic AI features with RAG.</p>
+		</div>
+	</section>
 
-	</body>
+	<section id="about">
+		<div class="wrap">
+			<h2>About</h2>
+			<p>I'm a Computer Science and Neuroscience double major at Northwestern. What actually interests me is intelligent systems in general, not any single form of them: software, machine learning models, robots, distributed infrastructure, or the brain itself. I like understanding how these systems work, then building things that push on that.</p>
+			<div class="tags">
+				<span class="tag">Python</span>
+				<span class="tag">JavaScript</span>
+				<span class="tag">C/C++</span>
+				<span class="tag">React.js</span>
+				<span class="tag">Django</span>
+				<span class="tag">TensorFlow</span>
+				<span class="tag">CUDA</span>
+				<span class="tag">OpenCV</span>
+				<span class="tag">Pandas / NumPy</span>
+				<span class="tag">Matplotlib</span>
+			</div>
+		</div>
+	</section>
+
+	<section id="explore">
+		<div class="wrap">
+			<h2>Explore</h2>
+			<div class="project-grid">
+				<div class="project-card">
+					<h3>Education</h3>
+					<p>Northwestern, a chess-club valedictorian from Lagos, and everything in between.</p>
+					<a class="arrow-link" href="education.html">Read more →</a>
+				</div>
+				<div class="project-card">
+					<h3>Research</h3>
+					<p>Neuroscience, AI, and computational biology, from the bench to the robotics lab.</p>
+					<a class="arrow-link" href="research.html">Read more →</a>
+				</div>
+				<div class="project-card">
+					<h3>Work & Projects</h3>
+					<p>Roles I've held and things I've built, from a YC-backed startup internship to a real-time AI inference platform.</p>
+					<a class="arrow-link" href="work.html">Read more →</a>
+				</div>
+				<div class="project-card">
+					<h3>Bookshelf</h3>
+					<p>Books I've read, or am reading, that have shaped how I think about building software.</p>
+					<a class="arrow-link" href="bookshelf.html">Read more →</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="contact">
+		<div class="wrap">
+			<h2>Get in touch</h2>
+			<p class="lede" style="font-size: 1.05rem;">I'm always open to conversations about intelligent systems, research, or anything in between. Reach out however's easiest.</p>
+			<div class="contact-links">
+				<a href="mailto:chibuezeanyachebelu2027@u.northwestern.edu"><i class="fas fa-envelope"></i> chibuezeanyachebelu2027@u.northwestern.edu</a>
+				<a href="https://github.com/The-RealOG"><i class="fab fa-github"></i> github.com/The-RealOG</a>
+			</div>
+			<p class="copyright">© Chibueze Anyachebelu, 2026 · Evanston, IL</p>
+		</div>
+	</footer>
+
+</body>
 </html>

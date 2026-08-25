@@ -1,327 +1,68 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Software Engineering Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-		<style>
-			body {
-				font-family: 'Poppins', sans-serif;
-				background-color: #0a0a0a;
-				color: #f0f0f0;
-			}
-			
-			/* Modern neon glow effects */
-			.neon-text {
-				text-shadow: 0 0 5px rgba(0, 195, 255, 0.8), 
-							0 0 10px rgba(0, 195, 255, 0.3);
-				color: #ffffff;
-				font-weight: 500;
-			}
-			
-			/* Project card styling */
-			.project-card {
-				background: rgba(25, 25, 35, 0.85);
-				backdrop-filter: blur(10px);
-				border-radius: 15px;
-				border: 1px solid rgba(255, 255, 255, 0.15);
-				box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-				padding: 30px;
-				margin: 20px 0;
-				transition: all 0.3s ease;
-				display: flex;
-				gap: 30px;
-			}
-			
-			.project-card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 15px 40px 0 rgba(0, 195, 255, 0.2);
-			}
-			
-			.project-image {
-				flex: 0 0 300px;
-				border-radius: 10px;
-				overflow: hidden;
-			}
-			
-			.project-image img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				transition: transform 0.3s ease;
-			}
-			
-			.project-card:hover .project-image img {
-				transform: scale(1.05);
-			}
-			
-			.project-content {
-				flex: 1;
-			}
-			
-			.project-content h2 {
-				color: #ffffff;
-				font-size: 1.8rem;
-				margin-bottom: 1rem;
-				font-weight: 600;
-			}
-			
-			.project-content p {
-				color: #f0f0f0;
-				line-height: 1.7;
-				margin-bottom: 1.5rem;
-				font-size: 1.05rem;
-			}
-			
-			.tech-stack {
-				margin: 1rem 0;
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px;
-			}
-			
-			.tech-badge {
-				background: rgba(40, 40, 60, 0.6);
-				padding: 6px 14px;
-				border-radius: 4px;
-				font-size: 0.9rem;
-				font-weight: 500;
-				color: white;
-				border: 1px solid rgba(255, 255, 255, 0.1);
-			}
-			
-			.project-links {
-				display: flex;
-				gap: 15px;
-			}
-			
-			.project-link {
-				display: inline-block;
-				background: linear-gradient(45deg, #00c3ff, #6a11cb);
-				color: white;
-				padding: 12px 24px;
-				border-radius: 8px;
-				text-decoration: none;
-				font-weight: 500;
-				transition: all 0.3s ease;
-				border: none;
-				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-			}
-			
-			.project-link.secondary {
-				background: rgba(40, 40, 60, 0.6);
-				border: 1px solid rgba(255, 255, 255, 0.1);
-			}
-			
-			.project-link:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 6px 20px rgba(0, 195, 255, 0.3);
-			}
-			
-			/* Custom scrollbar */
-			::-webkit-scrollbar {
-				width: 8px;
-			}
-			::-webkit-scrollbar-track {
-				background: #0a0a0a;
-			}
-			::-webkit-scrollbar-thumb {
-				background: linear-gradient(45deg, #00c3ff, #6a11cb);
-				border-radius: 10px;
-			}
-			
-			/* Responsive design */
-			@media screen and (max-width: 768px) {
-				.project-card {
-					flex-direction: column;
-				}
-				
-				.project-image {
-					flex: 0 0 200px;
-				}
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Software Engineering Projects | Chibueze Anyachebelu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" style="
-										font-size: 1.5rem;
-										background-color: #1a1a1a;
-										padding: 12px 24px;
-										border-radius: 8px;
-										display: inline-block;
-										border: 2px solid #00c3ff;
-										color: #ffffff;
-										font-weight: 600;
-										text-decoration: none;
-										transition: all 0.3s ease;
-									">Home Page</a>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/chibueze-anyachebelu-8b1098265/" class="icon brands fa-linkedin-in" style="font-size:30px"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/The-RealOG" class="icon brands fa-github" style="font-size:30px"><span class="label">GitHub</span></a></li>
-									
-									</ul>
-								</header>
-
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1 class="neon-text">Software Engineering Projects</h1>
-									</header>
-
-									<p style="font-size: 1.1rem; margin-bottom: 2rem;">
-										Explore my software engineering projects that demonstrate my expertise in building robust, scalable applications across various domains. From web applications to system utilities, these projects showcase my ability to create efficient and user-friendly solutions.
-									</p>
-
-									<div class="project-card">
-										<div class="project-image">
-											<img src="images/afrolingo.jpg" alt="Afrolingo Platform" />
-										</div>
-										<div class="project-content">
-											<h2 class="neon-text">Afrolingo - African Language Learning Platform</h2>
-											<p>Currently co-developing a Duolingo-like language learning web application focused on promoting African languages, with initial support for Igbo and Yoruba. Implemented secure CRUD operations for managing lessons and exercises while building a robust back-end architecture using Django. The platform features interactive language modules and user-friendly interfaces, with Firebase integration for efficient data storage and retrieval. Collaborated closely with linguistics experts from the University of Lagos to ensure content accuracy, while designing a scalable architecture to support additional African languages in the future.</p>
-											<div class="tech-stack">
-												<span class="tech-badge">Django</span>
-												<span class="tech-badge">Firebase</span>
-												<span class="tech-badge">Python</span>
-												<span class="tech-badge">React.js</span>
-												<span class="tech-badge">RESTful API</span>
-											</div>
-											<div class="project-links">
-												<a href="#" class="project-link">GitHub Repo</a>
-											</div>
-										</div>
-									</div>
-
-
-									<div class="project-card">
-										<div class="project-image">
-											<img src="images/portfolio.jpg" alt="Portfolio Website" />
-										</div>
-										<div class="project-content">
-											<h2 class="neon-text">Personal Portfolio Website</h2>
-											<p>Designed and developed a modern, responsive portfolio website using HTML5, CSS3, and JavaScript. Features include dynamic content loading, smooth animations, and a clean, professional design that showcases my work effectively.</p>
-											<div class="tech-stack">
-												<span class="tech-badge">HTML5</span>
-												<span class="tech-badge">CSS3</span>
-												<span class="tech-badge">JavaScript</span>
-												<span class="tech-badge">Responsive Design</span>
-											</div>
-											<div class="project-links">
-												<a href="#" class="project-link">GitHub Repo</a>
-											</div>
-										</div>
-									</div>
-
-									<div class="project-card">
-										<div class="project-image">
-											<img src="images/task-manager.jpg" alt="Task Manager" />
-										</div>
-										<div class="project-content">
-											<h2 class="neon-text">Advanced Task Management System</h2>
-											<p>Created a full-stack task management application with features like real-time updates, task prioritization, team collaboration, and detailed analytics. Implemented secure user authentication and data encryption.</p>
-											<div class="tech-stack">
-												<span class="tech-badge">React.js</span>
-												<span class="tech-badge">Django</span>
-												<span class="tech-badge">MongoDB</span>
-											</div>
-											<div class="project-links">
-												<a href="#" class="project-link">GitHub Repo</a>
-											</div>
-										</div>
-									</div>
-
-									
-
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Navigation</h2>
-									</header>
-									<ul style="margin-top: 15px;">
-										<li><a href="index.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">HOME</a></li>
-										<li><a href="generic.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">EDUCATION</a></li>
-										<li><a href="elements.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">WORK EXPERIENCE</a></li>
-										<li>
-											<span class="opener" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">PROJECTS</span>
-											<ul>
-												<li><a href="ai-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">AI/ML & Robotics</a></li>
-												<li><a href="software-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Software Engineering</a></li>
-												<li><a href="data-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Data Science</a></li>
-											</ul>
-										</li>
-										<li><a href="#" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">RESEARCH & PUBLICATIONS</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Contact</h2>
-									</header>
-									<ul class="contact" style="background-color: rgba(25, 25, 35, 0.85); padding: 20px; border-radius: 10px; border: 1px solid rgba(0, 195, 255, 0.15); margin: 0; list-style: none;">
-										<li class="icon solid fa-envelope" style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<a style="font-size: 0.9rem; color: #ffffff; font-weight: 500; word-break: break-word; line-height: 1.4;" href="mailto:chibuezeanyachebelu2027@u.northwestern.edu">chibuezeanyachebelu2027@u.northwestern.edu</a>
-										</li>
-										<li class="icon solid fa-home" style="margin-bottom: 15px; color: #ffffff; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<span style="font-size: 0.9rem; line-height: 1.4;">
-												1871 Orington Avenue<br />
-												Evanston, IL 60201
-											</span>
-										</li>
-										<li class="icon solid fa-university" style="color: #ffffff; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<span style="font-size: 0.9rem; line-height: 1.4;">
-												Northwestern University<br />
-											</span>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Chibueze Anyachebelu 2024</p>
-								</footer>
-
-						</div>
-					</div>
-
+	<header class="subpage-header">
+		<div class="wrap-wide">
+			<a class="back-link" href="work.html#projects"><i class="fas fa-arrow-left"></i> Back to Work</a>
+			<div class="icons">
+				<a href="https://github.com/The-RealOG" aria-label="GitHub"><i class="fab fa-github"></i></a>
+				<a href="mailto:chibuezeanyachebelu2027@u.northwestern.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
 			</div>
+		</div>
+	</header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<div class="wrap">
+		<div class="subpage-intro">
+			<h1>Software Engineering</h1>
+			<p>Applications built end-to-end: backend architecture, data, and the interfaces people actually use. Code for all of these lives on my <a href="https://github.com/The-RealOG">GitHub</a>.</p>
+		</div>
+	</div>
 
-	</body>
-</html> 
+	<div class="wrap" style="padding-bottom: 80px;">
+
+		<div class="detail-card">
+			<h2>Afrolingo: African Language Learning Platform</h2>
+			<p>Co-developing a Duolingo-style app focused on preserving and teaching African languages, starting with Igbo and Yoruba. Built secure CRUD lesson/exercise management on Django, with Firebase for data storage and a React frontend. Working directly with linguistics departments at Nigerian universities to keep the content authentic, with an eye toward domain-specific language models for underrepresented African languages down the line.</p>
+			<div class="tags">
+				<span class="tag">Django</span>
+				<span class="tag">Firebase</span>
+				<span class="tag">React.js</span>
+				<span class="tag">Python</span>
+				<span class="tag">RESTful API</span>
+			</div>
+		</div>
+
+		<div class="detail-card">
+			<h2>Advanced Task Management System</h2>
+			<p>A full-stack task manager with real-time updates, prioritization, and team collaboration, backed by secure authentication and encrypted data.</p>
+			<div class="tags">
+				<span class="tag">React.js</span>
+				<span class="tag">Django</span>
+				<span class="tag">MongoDB</span>
+			</div>
+		</div>
+
+		<div class="detail-card">
+			<h2>This Portfolio</h2>
+			<p>Designed and built this site itself: a clean, responsive, single-page portfolio meant to represent me better than a résumé PDF or a LinkedIn feed ever could.</p>
+			<div class="tags">
+				<span class="tag">HTML5</span>
+				<span class="tag">CSS3</span>
+				<span class="tag">Responsive Design</span>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

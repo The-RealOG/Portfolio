@@ -1,265 +1,71 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Data Science Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-		<style>
-			body {
-				font-family: 'Poppins', sans-serif;
-				background-color: #0a0a0a;
-				color: #f0f0f0;
-			}
-			
-			/* Modern neon glow effects */
-			.neon-text {
-				text-shadow: 0 0 5px rgba(0, 195, 255, 0.8), 
-							0 0 10px rgba(0, 195, 255, 0.3);
-				color: #ffffff;
-				font-weight: 500;
-			}
-			
-			/* Project card styling */
-			.project-card {
-				background: rgba(25, 25, 35, 0.85);
-				backdrop-filter: blur(10px);
-				border-radius: 15px;
-				border: 1px solid rgba(255, 255, 255, 0.15);
-				box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-				padding: 30px;
-				margin: 20px 0;
-				transition: all 0.3s ease;
-			}
-			
-			.project-card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 15px 40px 0 rgba(0, 195, 255, 0.2);
-			}
-			
-			/* Tech stack badges */
-			.tech-stack {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px;
-				margin: 15px 0;
-			}
-			
-			.tech-badge {
-				background: rgba(0, 195, 255, 0.1);
-				border: 1px solid rgba(0, 195, 255, 0.3);
-				padding: 8px 16px;
-				border-radius: 20px;
-				font-size: 0.9rem;
-				color: #ffffff;
-				transition: all 0.3s ease;
-			}
-			
-			.tech-badge:hover {
-				background: rgba(0, 195, 255, 0.2);
-				transform: translateY(-2px);
-			}
-			
-			/* Link styling */
-			.project-link {
-				display: inline-block;
-				margin-top: 20px;
-				padding: 12px 24px;
-				background: rgba(0, 195, 255, 0.1);
-				border: 1px solid rgba(0, 195, 255, 0.3);
-				border-radius: 8px;
-				color: #ffffff;
-				text-decoration: none;
-				transition: all 0.3s ease;
-			}
-			
-			.project-link:hover {
-				background: rgba(0, 195, 255, 0.2);
-				transform: translateY(-2px);
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Data Science Projects | Chibueze Anyachebelu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" style="
-										font-size: 1.5rem;
-										background-color: #1a1a1a;
-										padding: 12px 24px;
-										border-radius: 8px;
-										display: inline-block;
-										border: 2px solid #00c3ff;
-										color: #ffffff;
-										font-weight: 600;
-										text-decoration: none;
-										transition: all 0.3s ease;
-									">Home Page</a>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/chibueze-anyachebelu-8b1098265/" class="icon brands fa-linkedin-in" style="font-size:30px"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/The-RealOG" class="icon brands fa-github" style="font-size:30px"><span class="label">GitHub</span></a></li>
-										
-									</ul>
-								</header>
-
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1 class="neon-text">Data Science Projects</h1>
-									</header>
-
-									<p style="font-size: 1.1rem; margin: 20px 0;">
-										Welcome to my data science portfolio! Here you'll find projects that showcase my skills in data analysis, visualization, and statistical modeling using Python's data science stack and Excel.
-									</p>
-
-									<div class="project-card">
-										<h2 class="neon-text">Student Performance Analysis</h2>
-										<p style="font-size: 1.1rem; margin: 20px 0;">
-											Analyzed a dataset of student academic performance to identify key factors influencing success. Created visualizations and statistical models to understand the relationships between study habits, socioeconomic factors, and academic outcomes.
-										</p>
-										<div class="tech-stack">
-											<span class="tech-badge">Python</span>
-											<span class="tech-badge">Pandas</span>
-											<span class="tech-badge">Matplotlib</span>
-											<span class="tech-badge">Seaborn</span>
-											<span class="tech-badge">Excel</span>
-										</div>
-										<ul style="margin: 20px 0; color: #f0f0f0;">
-											<li>Cleaned and preprocessed data using Pandas</li>
-											<li>Created insightful visualizations with Matplotlib and Seaborn</li>
-											<li>Performed statistical analysis to identify significant correlations</li>
-											<li>Generated an interactive dashboard in Excel</li>
-										</ul>
-										<a href="#" class="project-link">View Analysis</a>
-									</div>
-
-									<div class="project-card">
-										<h2 class="neon-text">Weather Pattern Visualization</h2>
-										<p style="font-size: 1.1rem; margin: 20px 0;">
-											Analyzed historical weather data to identify patterns and trends. Created interactive visualizations to display temperature changes, precipitation patterns, and seasonal variations over multiple years.
-										</p>
-										<div class="tech-stack">
-											<span class="tech-badge">Python</span>
-											<span class="tech-badge">NumPy</span>
-											<span class="tech-badge">Matplotlib</span>
-											<span class="tech-badge">Pandas</span>
-										</div>
-										<ul style="margin: 20px 0; color: #f0f0f0;">
-											<li>Processed time-series data using Pandas</li>
-											<li>Created animated visualizations of weather patterns</li>
-											<li>Implemented moving averages and trend analysis</li>
-											<li>Generated heatmaps for temperature distribution</li>
-										</ul>
-										<a href="#" class="project-link">View Project</a>
-									</div>
-
-									<div class="project-card">
-										<h2 class="neon-text">COVID-19 Data Analysis</h2>
-										<p style="font-size: 1.1rem; margin: 20px 0;">
-											Analyzed COVID-19 data to track infection rates, vaccination progress, and recovery patterns across different regions. Created visualizations to communicate trends and patterns effectively.
-										</p>
-										<div class="tech-stack">
-											<span class="tech-badge">Python</span>
-											<span class="tech-badge">Pandas</span>
-											<span class="tech-badge">Matplotlib</span>
-											<span class="tech-badge">SciPy</span>
-											<span class="tech-badge">Excel</span>
-										</div>
-										<ul style="margin: 20px 0; color: #f0f0f0;">
-											<li>Data cleaning and preprocessing with Pandas</li>
-											<li>Statistical analysis using SciPy</li>
-											<li>Created interactive visualizations</li>
-											<li>Built an Excel dashboard for real-time monitoring</li>
-										</ul>
-										<a href="#" class="project-link">View Project</a>
-									</div>
-
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Navigation</h2>
-									</header>
-									<ul style="margin-top: 15px;">
-										<li><a href="index.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">HOME</a></li>
-										<li><a href="generic.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">EDUCATION</a></li>
-										<li><a href="elements.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">WORK EXPERIENCE</a></li>
-										<li>
-											<span class="opener" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">PROJECTS</span>
-											<ul>
-												<li><a href="ai-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">AI/ML & Robotics</a></li>
-												<li><a href="software-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Software Engineering</a></li>
-												<li><a href="data-projects.html" style="background-color: rgba(35, 35, 50, 0.95); border-radius: 4px; margin: 5px 0; padding: 10px; font-weight: 400; color: #ffffff; font-size: 0.95rem;">Data Science</a></li>
-											</ul>
-										</li>
-										<li><a href="research.html" style="font-size: 1.1rem; padding: 12px 15px; background-color: rgba(20, 20, 30, 0.85); margin-bottom: 10px; border-radius: 6px; display: block; border: 1px solid rgba(0, 195, 255, 0.3); font-weight: 500; color: white; text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);">RESEARCH & PUBLICATIONS</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2 class="neon-text" style="font-size: 1.5rem; margin-bottom: 1.2rem;">Contact</h2>
-									</header>
-									<ul class="contact" style="background-color: rgba(25, 25, 35, 0.85); padding: 20px; border-radius: 10px; border: 1px solid rgba(0, 195, 255, 0.15); margin: 0; list-style: none;">
-										<li class="icon solid fa-envelope" style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<a style="font-size: 0.9rem; color: #ffffff; font-weight: 500; word-break: break-word; line-height: 1.4;" href="mailto:chibuezeanyachebelu2027@u.northwestern.edu">chibuezeanyachebelu2027@u.northwestern.edu</a>
-										</li>
-										<li class="icon solid fa-home" style="margin-bottom: 15px; color: #ffffff; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<span style="font-size: 0.9rem; line-height: 1.4;">
-												1871 Orington Avenue<br />
-												Evanston, IL 60201
-											</span>
-										</li>
-										<li class="icon solid fa-university" style="color: #ffffff; display: flex; align-items: flex-start;">
-											<i class="icon" style="margin-right: 10px; color: #00c3ff; width: 20px; text-align: center;"></i>
-											<span style="font-size: 0.9rem; line-height: 1.4;">
-												Northwestern University<br />
-											</span>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Chibueze Anyachebelu 2024</p>
-								</footer>
-
-						</div>
-					</div>
-
+	<header class="subpage-header">
+		<div class="wrap-wide">
+			<a class="back-link" href="work.html#projects"><i class="fas fa-arrow-left"></i> Back to Work</a>
+			<div class="icons">
+				<a href="https://github.com/The-RealOG" aria-label="GitHub"><i class="fab fa-github"></i></a>
+				<a href="mailto:chibuezeanyachebelu2027@u.northwestern.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
 			</div>
+		</div>
+	</header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<div class="wrap">
+		<div class="subpage-intro">
+			<h1>Data Science</h1>
+			<p>Turning raw datasets into visualizations, statistics, and models. Code for all of these lives on my <a href="https://github.com/The-RealOG">GitHub</a>.</p>
+		</div>
+	</div>
 
-	</body>
-</html> 
+	<div class="wrap" style="padding-bottom: 80px;">
+
+		<div class="detail-card">
+			<h2>Student Performance Analysis</h2>
+			<p>Analyzed academic performance data to identify what actually predicts success, cleaning and modeling the relationships between study habits, socioeconomic factors, and outcomes, then packaging the results into an Excel dashboard.</p>
+			<div class="tags">
+				<span class="tag">Python</span>
+				<span class="tag">Pandas</span>
+				<span class="tag">Matplotlib</span>
+				<span class="tag">Seaborn</span>
+				<span class="tag">Excel</span>
+			</div>
+		</div>
+
+		<div class="detail-card">
+			<h2>Weather Pattern Visualization</h2>
+			<p>Processed historical weather time-series data to surface temperature, precipitation, and seasonal trends, with animated visualizations, moving averages, and heatmaps.</p>
+			<div class="tags">
+				<span class="tag">Python</span>
+				<span class="tag">NumPy</span>
+				<span class="tag">Matplotlib</span>
+				<span class="tag">Pandas</span>
+			</div>
+		</div>
+
+		<div class="detail-card">
+			<h2>COVID-19 Data Analysis</h2>
+			<p>Tracked infection rates, vaccination progress, and recovery patterns across regions, with statistical analysis in SciPy and a live-monitoring Excel dashboard.</p>
+			<div class="tags">
+				<span class="tag">Python</span>
+				<span class="tag">Pandas</span>
+				<span class="tag">Matplotlib</span>
+				<span class="tag">SciPy</span>
+				<span class="tag">Excel</span>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
